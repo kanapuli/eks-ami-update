@@ -1,0 +1,6 @@
+{
+	"dryRun": true,
+	"autoscalingEnabled": true,
+	"autoscalerNamespace": "default"
+
+}
