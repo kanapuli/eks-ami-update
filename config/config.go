@@ -18,10 +18,10 @@ type Configuration struct {
 func New() *Configuration {
 	return &Configuration{
 		AutoscalingEnabled:  false,
-		AutoscalerNamespace: "default",
+		AutoscalerNamespace: "",
 		AsgName:             "",
 		AsgDesiredCapacity:  0,
-		DryRun:              true,
+		DryRun:              false,
 	}
 }
 

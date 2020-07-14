@@ -1,9 +1,17 @@
 package config
 
 import (
+	"reflect"
 	"strings"
 	"testing"
 )
+
+func TestNew(t *testing.T) {
+	conf := New()
+	if !reflect.DeepEqual(new(Configuration), conf) {
+		t.Errorf("Expected %v but got %v", new(Configuration), conf)
+	}
+}
 
 func TestRead(t *testing.T) {
 	jsonInput := strings.NewReader("{ \"autoscalingEnabled\": true, \"autoscalerNamespace\": \"default\", \"asgName\": \"eks-1-16-asg\" , \"asgDesiredCapacity\": 2, \"dryRun\": false }")
