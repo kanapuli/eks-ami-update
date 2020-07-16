@@ -7,21 +7,23 @@ import (
 
 // Configuration is the base application configuration
 type Configuration struct {
-	AutoscalingEnabled  bool   `json:"autoscalingEnabled"`
-	AutoscalerNamespace string `json:"autoscalerNamespace"`
-	AsgName             string `json:"asgName"`
-	AsgDesiredCapacity  int    `json:"asgDesiredCapacity"`
-	DryRun              bool   `json:"dryRun"`
+	AutoscalingEnabled   bool   `json:"autoscalingEnabled"`
+	AutoscalerNamespace  string `json:"autoscalerNamespace"`
+	AutoscalerDeployment string `json:"autoscalerDeployment"`
+	AsgName              string `json:"asgName"`
+	AsgDesiredCapacity   int    `json:"asgDesiredCapacity"`
+	DryRun               bool   `json:"dryRun"`
 }
 
 // New returns a new instance of Configuration
 func New() *Configuration {
 	return &Configuration{
-		AutoscalingEnabled:  false,
-		AutoscalerNamespace: "",
-		AsgName:             "",
-		AsgDesiredCapacity:  0,
-		DryRun:              false,
+		AutoscalingEnabled:   false,
+		AutoscalerNamespace:  "",
+		AutoscalerDeployment: "",
+		AsgName:              "",
+		AsgDesiredCapacity:   0,
+		DryRun:               false,
 	}
 }
 
